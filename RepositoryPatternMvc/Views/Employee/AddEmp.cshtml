@@ -1,0 +1,32 @@
+﻿@model Emp
+@{
+    ViewData["Title"] = "AddEmp";
+}
+
+<h1>AddEmp</h1>
+
+<form method="post">
+    <div class="form-group">
+        <label for="exampleInputEmail1"> Name</label>
+        <input type="text" asp-for="Name" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Name">
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1"> Dept</label>
+        <input type="text" asp-for="Dept" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Department">
+        <span asp-validation-for="Dept"></span>
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1"> Salary</label>
+        <input type="text" asp-for="Salary" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Salary">
+        <span asp-validation-for="Salary"></span>
+    </div>
+    <br />
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+@section scripts{
+    <partial name="_ValidationScriptsPartial"></partial>
+}
+
